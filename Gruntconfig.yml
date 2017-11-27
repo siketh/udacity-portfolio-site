@@ -1,0 +1,8 @@
+htmlSrcDir:   src/html/
+scssSrcDir:   src/sass/
+jsSrcDir:     src/js/
+scssBuildDir: build/sass/
+jsBuildDir:   build/js/
+htmlDistDir:  dist/html/
+cssDistDir:   dist/css/
+jsDistDir:    dist/js/
