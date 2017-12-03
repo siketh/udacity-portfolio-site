@@ -1,83 +1,203 @@
 body {
-  background-color: black;
   box-sizing: border-box;
-  font-family: 'Slabo 27px', serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 
-  #primary-footer,
-  #primary-header {
-    background-color: white;
-    padding: 24px;
+  & > header {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  #primary-header {
-    #portfolio-logo-container {
-      flex: 1 100%;
-      margin: auto 0;
-      text-align: center;
-    }
+    justify-content: space-between;
 
     #portfolio-title-container {
-      flex: 1 100%;
+      margin: 0 10px;
       text-align: center;
-      margin: auto 0;
+      flex: 1 100%;
+
+      h1 {
+        margin: 0;
+        font-size: 32px;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: white;
+        color: black;
+      }
     }
 
-    img {
-      max-width: 100px;
-      max-height: 100px;
-    }
+    nav {
+      margin: 0 10px;
 
-    h1,
-    h2 {
-      margin: 0;
+      ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+
+        li {
+          list-style: none;
+          display: inline-block;
+          background: black;
+          font-weight: bold;
+          padding: 10px;
+          margin: 10px 0;
+
+          a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+          }
+        }
+
+        li:hover {
+          background: white;
+          cursor: pointer;
+
+          a {
+            color: black;
+          }
+        }
+      }
     }
   }
 
-  main {
-    #hero-container {
-      height: 250px;
-    }
+  & > main {
+    #articles-container {
+      display: flex;
+      flex-wrap: wrap;
+      background: purple;
+      padding: 1px;
+      margin: 0 10px;
 
-    & > section {
-      padding: 24px;
-      background-color: white;
-      margin: 8px 0;
+      article {
+        margin: 1px;
+        max-height: 250px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: black;
+
+        header {
+          order: 1;
+          flex: 1 50%;
+
+          h3 {
+            font-size: 14px;
+          }
+        }
+
+        .article-image {
+          min-width: 100px;
+          min-height: 75px;
+          height: auto;
+          width: auto;
+          background-color: white;
+          order: 0;
+          margin: 5px;
+          height: 20vw;
+          flex: 1 25%;
+          width: 30vw;
+        }
+
+        p {
+          order: 2;
+          display: none;
+        }
+      }
+    }
+  }
+
+  & > footer {
+    p {
+      text-align: center;
+      font-weight: lighter;
+      font-size: 12px;
     }
   }
 }
 @media screen and (min-width: 500px) {
   body {
-    #primary-footer,
-    #primary-header {
-      background-color: white;
-      padding: 24px;
-      display: flex;
-      flex-wrap: nowrap;
+    & > header {
+      #portfolio-title-container {
+        h1 {
+          font-size: 40px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      nav {
+        ul {
+          li {
+            padding: 10px;
+            margin: 10px 0;
+          }
+        }
+      }
     }
 
-    #primary-header {
-      #portfolio-logo-container {
-        flex: 1 30%;
-        margin: auto 0;
-        text-align: left;
-      }
+    & > main {
+      #articles-container {
+        article {
+          flex: 1 40%;
 
+          header {
+            flex: 1 100%;
+
+            h3 {
+              font-size: 22px;
+              padding: 0 10px;
+            }
+          }
+
+          .article-image {
+            height: 20vw;
+            width: 30vw;
+            margin: 0;
+            flex: 1 100%;
+          }
+        }
+      }
+    }
+
+    & > footer {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  body {
+    & > header {
       #portfolio-title-container {
-        flex: 1 70%;
-        text-align: right;
-        margin: auto 0;
-      }
+        h1 {
+          font-size: 48px;
+        }
 
-      img {
-        max-width: 100px;
-        max-height: 100px;
+        h2 {
+          font-size: 32px;
+        }
       }
+    }
 
-      h1,
-      h2 {
-        margin: 0;
+    & > main {
+      #articles-container {
+        article {
+          flex: 1 30%;
+          max-height: 100%;
+
+          header {
+            h3 {}
+          }
+        }
       }
     }
   }
