@@ -43,13 +43,20 @@ module.exports = function(grunt) {
         dest: config.jsDistDir + pkg.name + '.js'
       }
     },
+    copy: {
+      dist: {
+        expand: true,
+        src: config.imagesSrcDir + "*",
+        dest: config.imagesDistDir
+      }
+    },
     watch: {
       scripts: {
-        files: [config.jsSrcDir + '**/*.js', config.htmlSrcDir + '**/*.html',
+        files: ['Gruntfile.js', config.jsSrcDir + '**/*.js', config.htmlSrcDir + '**/*.html',
           config.scssSrcDir + '**/*.scss'
         ],
         tasks: ['clean', 'jshint', 'concat', 'htmlmin',
-          'sass', 'uglify'
+          'sass', 'uglify', 'copy'
         ],
         options: {
           spawn: false,
