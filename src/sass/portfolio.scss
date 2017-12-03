@@ -69,22 +69,22 @@ body {
     #articles-container {
       display: flex;
       flex-wrap: wrap;
-      background: purple;
+      flex-direction: column;
+      background: white;
       padding: 1px;
       margin: 0 10px;
 
       article {
         margin: 1px;
-        max-height: 250px;
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        flex-direction: column;
         background-color: black;
+        cursor: pointer;
 
         header {
           order: 1;
-          flex: 1 50%;
+          padding: 5px;
 
           h3 {
             font-size: 14px;
@@ -92,21 +92,10 @@ body {
         }
 
         .article-image {
-          min-width: 100px;
-          min-height: 75px;
-          height: auto;
-          width: auto;
+          min-width: 192px;
+          min-height: 108px;
           background-color: white;
           order: 0;
-          margin: 5px;
-          height: 20vw;
-          flex: 1 25%;
-          width: 30vw;
-        }
-
-        p {
-          order: 2;
-          display: none;
         }
       }
     }
@@ -132,36 +121,19 @@ body {
           font-size: 24px;
         }
       }
-
-      nav {
-        ul {
-          li {
-            padding: 10px;
-            margin: 10px 0;
-          }
-        }
-      }
     }
 
     & > main {
       #articles-container {
+        flex-direction: row;
+
         article {
-          flex: 1 40%;
+          flex: 1 45%;
 
           header {
-            flex: 1 100%;
-
             h3 {
               font-size: 22px;
-              padding: 0 10px;
             }
-          }
-
-          .article-image {
-            height: 20vw;
-            width: 30vw;
-            margin: 0;
-            flex: 1 100%;
           }
         }
       }
@@ -192,12 +164,30 @@ body {
       #articles-container {
         article {
           flex: 1 30%;
-          max-height: 100%;
-
-          header {
-            h3 {}
-          }
         }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    & > header {
+      #portfolio-title-container {
+        h1 {
+          font-size: 48px;
+        }
+
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+
+    & > main {
+      #articles-container {
+        align-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
       }
     }
   }
