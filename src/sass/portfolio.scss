@@ -24,6 +24,11 @@ body {
       flex: 1 100%;
       text-align: center;
 
+      #brand-logo {
+        width: 100px;
+        height: 100px;
+      }
+
       #brand-heading,
       #brand-subheading {
         margin: 0;
@@ -95,14 +100,14 @@ body {
       color: $font-dark;
       box-shadow: $box-shadow-light;
       width: -webkit-fill-available;
-      margin: 0 5px 5px 5px;
+      margin: 0 5px 5px;
       display: flex;
       flex-direction: column;
       cursor: pointer;
 
       .project-image {
         background: $secondary-dark;
-        padding-bottom: 56.25%;
+        width: 100%;
       }
 
       .project-description {
@@ -151,10 +156,12 @@ body {
     #projects {
       margin: 0 10px;
       flex-direction: row;
+      justify-content: center;
 
       .project {
-        margin: 0 10px 20px 10px;
-        flex: 1 45%;
+        margin: 0 10px 20px;
+        flex-basis: 32%;
+        flex-grow: 0;
 
         .project-image {}
 
@@ -199,8 +206,6 @@ body {
 
     #projects {
       .project {
-        flex: 1 30%;
-
         .project-image {}
 
         .project-description {}
