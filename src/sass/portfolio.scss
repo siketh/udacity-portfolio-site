@@ -90,6 +90,11 @@ body {
     }
   }
 
+  #posts,
+  #about {
+    text-align: center;
+  }
+
   #projects {
     display: flex;
     flex-wrap: wrap;
