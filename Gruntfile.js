@@ -46,9 +46,12 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         expand: true,
-        src: config.imagesSrcDir + "*",
-        dest: config.imagesDistDir
-      }
+        cwd: config.imagesSrcDir,
+        src: '**',
+        dest: config.imagesDistDir,
+        flatten: true,
+        filter: 'isFile',
+      },
     },
     watch: {
       scripts: {
@@ -66,6 +69,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['clean', 'jshint', 'concat', 'htmlmin',
-    'sass', 'uglify', 'watch'
+    'sass', 'uglify', 'copy', 'watch'
   ]);
 };

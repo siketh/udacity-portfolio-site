@@ -14,9 +14,13 @@
 <body>
   <header id="primary-header">
     <section id="header-brand">
-      <img id="brand-logo" src="../images/src/images/logo3.png" />
-      <h1 id="brand-heading">TREVOR ROMAN</h1>
-      <h2 id="brand-subheading">Software Engineer</h2>
+      <div id="header-left-column">
+        <img id="brand-logo" src="../images/logo.png" alt="Trevor Roman's logo" />
+      </div>
+      <div id="header-right-column">
+        <h1 id="brand-heading">Trevor Roman</h1>
+        <h2 id="brand-subheading">Software Engineer</h2>
+      </div>
     </section>
     <section id="header-nav">
       <nav id="primary-nav">
@@ -44,26 +48,29 @@
       </nav>
     </section>
   </header>
-  <main>
+  <main id="content">
+    <section id="content-title-container">
+      <h3 id="content-title">Featured Work</h3>
+    </section>
     <section id="projects">
       <figure class="project">
-        <img class="project-image" src="../images/src/images/movie-small.png" srcset="../images/src/images/movie-large.png 800w"
-          alt="Movie Trailer Website Project"></img>
+        <img class="project-image" src="../images/movie-small.png" srcset="../images/movie-large.png 800w, ../images/movie-small.png 200w"
+          sizes="100vw" alt="Movie Trailer Website project thumbnail" />
         <figcaption class="project-description">Movie Trailer Website</figcaption>
       </figure>
       <figure class="project">
-        <img class="project-image" src="../images/src/images/robot-small.png" srcset="../images/src/images/robot-large.png 800w"
-          alt="Autonomous Sentry Robot Project"></img>
+        <img class="project-image" src="../images/robot-small.png" srcset="../images/robot-large.png 800w, ../images/robot-small.png 200w"
+          sizes="100vw" alt="Autonomous Sentry Robot project thumbnail" />
         <figcaption class="project-description">Autonomous Sentry Robot</figcaption>
       </figure>
       <figure class="project">
-        <img class="project-image" src="../images/src/images/blog-small.png" srcset="../images/src/images/blog-large.png 800w"
-          alt="Blog Project"></img>
+        <img class="project-image" src="../images/blog-small.png" srcset="../images/blog-large.png 800w, ../images/blog-small.png 200w"
+          sizes="100vw" alt="Blog project thumbnail" />
         <figcaption class="project-description">TRBlog</figcaption>
       </figure>
       <figure class="project">
-        <img class="project-image" src="../images/src/images/tower-small.png" srcset="../images/src/images/tower-large.png 800w"
-          alt="Tower Defender Project"></img>
+        <img class="project-image" src="../images/tower-small.png" srcset="../images/tower-large.png 800w, ../images/tower-small.png 200w"
+          sizes="100vw" alt="Tower Defender project thumbnail" />
         <figcaption class="project-description">Tower Defender</figcaption>
       </figure>
     </section>

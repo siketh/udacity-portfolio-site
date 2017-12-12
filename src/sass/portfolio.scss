@@ -21,10 +21,13 @@ body {
     justify-content: space-between;
 
     #header-brand {
-      flex: 1 100%;
       text-align: center;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
 
       #brand-logo {
+        padding: 18px 0 0;
         width: 100px;
         height: 100px;
       }
@@ -32,7 +35,7 @@ body {
       #brand-heading,
       #brand-subheading {
         margin: 0;
-        padding: 10px;
+        padding: 5px;
         text-transform: uppercase;
       }
 
@@ -45,8 +48,8 @@ body {
         background: $secondary-color;
         color: $font-dark;
         box-shadow: $box-shadow-light;
-        margin: 0 10px;
-        font-size: 16px;
+        margin: 0 5px;
+        font-size: 18px;
       }
     }
 
@@ -71,6 +74,7 @@ body {
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
+            font-size: 18px;
           }
 
           &:hover {
@@ -90,9 +94,19 @@ body {
     }
   }
 
-  #posts,
-  #about {
+  #about,
+  #posts {
     text-align: center;
+  }
+
+  #content-title {
+    background: $secondary-color;
+    color: $font-dark;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    margin: 0 5px 5px 5px;
   }
 
   #projects {
@@ -132,32 +146,9 @@ body {
 }
 @media screen and (min-width: 500px) {
   body {
-    #primary-header {
-      #header-brand {
-        #brand-heading {
-          font-size: 48px;
-        }
-
-        #brand-subheading {
-          font-size: 24px;
-        }
-      }
-
-      #header-nav {
-        ul > li {
-          a {}
-
-          &:hover {
-            a {}
-          }
-        }
-
-        #primary-nav {}
-
-        #social-nav {}
-      }
+    #content-title {
+        margin: 0 10px 20px 10px;
     }
-
     #projects {
       margin: 0 10px;
       flex-direction: row;
@@ -167,16 +158,6 @@ body {
         margin: 0 10px 20px;
         flex-basis: 32%;
         flex-grow: 0;
-
-        .project-image {}
-
-        .project-description {}
-      }
-    }
-
-    #primary-footer {
-      p {
-        font-size: 16px;
       }
     }
   }
@@ -185,6 +166,11 @@ body {
   body {
     #primary-header {
       #header-brand {
+        #brand-logo {
+          width: 125px;
+          height: 125px;
+        }
+
         #brand-heading {
           font-size: 48px;
         }
@@ -193,76 +179,18 @@ body {
           font-size: 32px;
         }
       }
-
-      #header-nav {
-        ul > li {
-          a {}
-
-          &:hover {
-            a {}
-          }
-        }
-
-        #primary-nav {}
-
-        #social-nav {}
-      }
     }
 
-    #projects {
-      .project {
-        .project-image {}
-
-        .project-description {}
-      }
-    }
-
-    #primary-footer {
-      p {}
+    #content-title {
+      font-size: 24px;
     }
   }
 }
 @media screen and (min-width: 1200px) {
   body {
-    #primary-header {
-      #header-brand {
-        #brand-heading {}
-
-        #brand-subheading {}
-      }
-
-      #header-nav {
-        margin: 0 auto;
-        max-width: 1200px;
-
-        ul > li {
-          a {}
-
-          &:hover {
-            a {}
-          }
-        }
-
-        #primary-nav {}
-
-        #social-nav {}
-      }
-    }
-
     #projects {
-      align-content: center;
       max-width: 1200px;
       margin: 0 auto;
-
-      .project {
-        .project-image {}
-
-        .project-description {}
-      }
-    }
-
-    #primary-footer {
-      p {}
     }
   }
 }
