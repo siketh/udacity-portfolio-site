@@ -4,7 +4,7 @@
 
 ## Overview
 
-Static portfolio website project for the Udacity Full Stack Web Developer nanodegree. Provides links a page with some featured projects, a placeholder page for a blog, and a placeholder page for an about me.
+Static portfolio website project for the Udacity Full Stack Web Developer nanodegree. Provides links to a page with featured projects, a placeholder page for a blog, and a placeholder page for an about me.
 
 ## Set-up
 
